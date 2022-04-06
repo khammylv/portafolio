@@ -1,0 +1,153 @@
+:root {
+    --fondoClaro: #e9ecef;
+    --fondoOscuro: #a9d6e5;
+    --colorHover: #0566c7;
+    --sombra: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    --icono: #023e8a;
+    --letra-img: #03045e;
+    --menu:   linear-gradient(-225deg, rgba(110, 214, 237, 0.5) 0%, rgba(33, 147, 176, 0.5)48%, rgba(5, 102, 199, 0.7)100%);
+    --botonContac: linear-gradient(-225deg, rgba(110, 214, 237) 0%, rgba(33, 147, 176)48%, rgba(5, 102, 199)100%);
+  }
+
+#section6{
+    background: var(--menu);
+}
+
+.formulario{
+    display:flex;
+    height: auto;
+}
+
+.img-form{
+    display: block;
+    width: 40%;
+}
+
+.cont-img{
+    width:400px;
+    height: 100%;
+}
+
+.img-contact{
+display: block;
+width: 100%;
+height: 100%;
+}
+
+.div-form{
+    width: 60%;
+}
+
+.form-container{
+    width: 100%;  
+}
+
+.form-container h2{
+    margin:  10px 45px;
+}
+
+.form-container p{
+    margin:  0px 45px;
+}
+
+.grupo{
+    position: relative;
+    margin: 45px;
+}
+ 
+.form-input{
+    font-family: inherit;
+    background: none;
+    color: var(--letra-img);
+    font-size: 1rem;
+    padding:.8em 1em;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--fondoClaro);
+}
+
+.input-mensaje{
+    resize: none;
+   
+}
+
+
+.form-input:focus{ 
+    outline: none;
+    color: var(--letra-img);
+}
+
+
+label{
+    color: var(--letra-img);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+    outline: none;
+}
+
+.form-input:focus~label,
+.form-input:valid~label{
+    top: -14px;
+    font-size: 1rem;
+    color: var(--letra-img);
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: var(--botonContac);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+.form-input:focus~.barra::before{
+    width: 100%;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: var(--letra-img);
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.form-enviar{
+    font-family: 'roboto';
+    background: var(--botonContac);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1000px){
+    .img-form{
+        display: none;
+    }
+
+    .div-form{
+        width: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+:root{
+    --fondoOscuro: #a9d6e5;
+}
+
+#section1{
+    background-color: var(--fondoOscuro);
+}
+
+.firma{
+    margin-top: 0.5em;
+    font-family: 'Beau Rivage', cursive; 
+}
+
+.contenedor-section1 h2{
+    margin-bottom: 0.5em;
+}

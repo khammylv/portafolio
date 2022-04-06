@@ -1,0 +1,147 @@
+:root{
+    --icono: #023e8a;
+    --fondoClaro: #e9ecef;
+    --fondoOscuro: #a9d6e5;
+    --letra-img: #03045e;
+}
+
+ol, ul {
+	list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.contenedor-experiencia{
+    text-align:center;
+   
+}
+.contenido-cartas{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.cartas-experiencia{
+    width: 100%;
+    height:auto;
+    display:flex;
+    margin-bottom: 3em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-cartas-experiencia{
+    width: 600px;
+    height:300px; 
+}
+
+.img-experiencia{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.texto-cartas-experiencia{
+    width:600px;
+    height: 100%;
+   
+    text-align: center;
+}
+
+.texto-cartas-experiencia ol{
+    padding-top: 1em;
+}
+
+.texto-cartas-experiencia a{
+    border-radius: 1px;
+    text-align: center;
+    
+    width: 150px;
+    padding: 10px;
+   
+}
+
+
+.btn-repositorio{
+    border: 1px solid var(--icono);
+    color: var(--icono);
+    margin-right: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.btn-demo{
+   background-color: var(--icono);
+   color: var(--fondoClaro);
+   box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.btn-repositorio:hover{
+    background-color: var(--letra-img);
+    color: var(--fondoOscuro);
+    box-shadow: rgba(0, 0, 0, 0.5);
+    padding: 13px;
+}
+
+.btn-demo:hover{
+    border: 1px solid var(--letra-img);
+    color: var(--letra-img);
+    background-color: var(--fondoOscuro);
+    box-shadow: rgba(0, 0, 0, 0.5);
+    padding: 13px;
+}
+
+.izquierda{
+    animation: moverIzquierda 1s ease-in;
+}
+
+.derecha{
+    animation: moverDerecha 1s ease-in; 
+}
+
+/*trancisiones*/
+
+@keyframes moverIzquierda{
+  
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    } 
+}
+
+@keyframes moverDerecha{
+  
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    } 
+}
+
+@media screen and (max-width: 800px){
+    .exp-uno, .exp-tres{
+        flex-direction: column;
+
+    }
+
+    .exp-dos, .exp-cuatro{
+        flex-direction: column-reverse;
+
+    }
+
+    .texto-cartas-experiencia{
+        margin-top: 1em;
+    }
+}
